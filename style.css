@@ -1,0 +1,40 @@
+body {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  background-color: #fff6f6;
+  text-align: center;
+  padding: 40px;
+}
+
+.character {
+  width: 150px;
+  animation: shake 1s infinite ease-in-out;
+}
+
+h1 {
+  font-size: 48px;
+  margin: 20px 0;
+  color: #555;
+}
+
+button {
+  font-size: 20px;
+  margin: 10px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 20px;
+  background-color: #ffd6e0;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #ffc0cb;
+}
+
+@keyframes shake {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-5deg); }
+  75% { transform: rotate(5deg); }
+}
+
