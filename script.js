@@ -2,6 +2,7 @@ let startTime = 0;
 let elapsedTime = 0;
 let timerInterval;
 
+// 表示形式を「分:秒.ミリ秒」にする関数
 function timeToString(ms) {
   const minutes = Math.floor(ms / 60000);
   const seconds = Math.floor((ms % 60000) / 1000);
@@ -13,7 +14,11 @@ function timeToString(ms) {
   );
 }
 
+// スタートボタン
 function start() {
+  // すでに動いているときは何もしない
+  if (timerInterval) return;
+
   startTime = Date.now() - elapsedTime;
   timerInterval = setInterval(() => {
     elapsedTime = Date.now() - startTime;
@@ -21,12 +26,16 @@ function start() {
   }, 100);
 }
 
+// ストップボタン
 function stop() {
   clearInterval(timerInterval);
+  timerInterval = null;
 }
 
+// リセットボタン
 function reset() {
   clearInterval(timerInterval);
+  timerInterval = null;
   elapsedTime = 0;
   document.getElementById("display").textContent = "00:00.0";
 }
