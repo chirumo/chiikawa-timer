@@ -39,3 +39,8 @@ function reset() {
   elapsedTime = 0;
   document.getElementById("display").textContent = "00:00.0";
 }
+
+// ページ遷移
+function goToChillPage() {
+  window.location.href = "chill-page.html";
+}

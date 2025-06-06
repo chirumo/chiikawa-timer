@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Chillページ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <img src="chiikawa.png" alt="ちいかわ" class="character">
+    <h1 id="display">00:00.0</h1>
+    <div class="buttons">
+      <button onclick="start()">スタート</button>
+      <button onclick="stop()">ストップ</button>
+      <button onclick="reset()">リセット</button>
+    </div>
+    <div class="tabs">
+      <button onclick="location.href='index.html'" class="tab">タイマー</button>
+      <button onclick="location.href='chill-page.html'" class="tab">チルページ</button>
+    </div>
+
+    <div class="youtube">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/66bIJ7GXE-k" 
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+      </iframe>
+    </div>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
